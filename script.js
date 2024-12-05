@@ -1,7 +1,8 @@
 // Evento que lida com o envio do formulário
 document.getElementById('formulario-transacao').addEventListener('submit', function (e) {
   e.preventDefault(); // Previne o comportamento padrão do formulário
-  const indiceEdicao = document.getElementById('indice-edicao').value;
+  //o comportamento padrão ao ser enviado é recarregar a página, o que não é desejado aqui por isso usa o preventDefault.
+  const indiceEdicao = document.getElementById('indice-edicao').value;//const nao pode ser reatribuido valor
   if (indiceEdicao === '-1') {
     adicionarTransacao(); // Se não estiver editando, adiciona nova transação
   } 
